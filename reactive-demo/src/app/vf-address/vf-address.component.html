@@ -1,0 +1,13 @@
+<div [formGroup]="addressForm">
+    <mat-form-field>
+        <input  matInput type="number" (keypress)="ignorDot($event.key)" formControlName="houseNo" placeholder="House No"/>
+
+    </mat-form-field>
+    <h1>{{ addressForm.get('houseNo').value}}</h1>
+    <mat-form-field>
+        <input  matInput type="text"  formControlName="street" placeholder="Street"/>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput type="text" formControlName="postCode" placeholder="PostCode"/>
+    </mat-form-field>
+</div>
