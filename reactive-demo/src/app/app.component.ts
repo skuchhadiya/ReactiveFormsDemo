@@ -48,6 +48,7 @@ export class AppComponent implements OnInit {
       this.formC = this.buildFormC(fakeuser);
   }
   onAddressValueChnage(event: any): void {
+
   }
 
   private  buildFormA(user: User): FormGroup {
@@ -66,6 +67,7 @@ export class AppComponent implements OnInit {
      age : new FormControl(user.age, [Validators.required, ageValidator]),
      addresses : this.buildAddressFormArray(user.addresses)
    });
+
  }
 
  private buildFormC(user: User): FormGroup {
